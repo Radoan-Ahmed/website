@@ -138,10 +138,22 @@ class _NavBarState extends State<NavBar> {
   }
 
   List<Widget> _buildNavItems() {
-    return AppContent.navLinks.map((link) {
+    return AppContent.navLinks
+        .where((link) => link['label'] != 'Branches')
+        .map((link) {
+      // Remove dropdown for 'About Us' and treat as regular nav item
+      if (link['label'] == 'About Us') {
+        return _NavItem(
+          label: link['label']!,
+          onTap: () => _scrollTo(link['url']!),
+        );
+      }
       final hasChildren = link['children'] != null;
       if (hasChildren) {
-        return _DropdownNavItem(link: link);
+        return _DropdownNavItem(
+          link: link,
+          onParentTap: () => _scrollTo(link['url']!),
+        );
       }
       return _NavItem(
         label: link['label']!,
@@ -213,7 +225,8 @@ class _NavItemState extends State<_NavItem> {
 
 class _DropdownNavItem extends StatefulWidget {
   final Map<String, dynamic> link;
-  const _DropdownNavItem({required this.link});
+  final VoidCallback onParentTap;
+  const _DropdownNavItem({required this.link, required this.onParentTap});
 
   @override
   State<_DropdownNavItem> createState() => _DropdownNavItemState();
@@ -230,21 +243,24 @@ class _DropdownNavItemState extends State<_DropdownNavItem> {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            child: Row(
-              children: [
-                Text(
-                  widget.link['label'],
-                  style: AppTheme.navLabel.copyWith(
-                    color: _hovered ? AppTheme.primary : AppTheme.dark,
+          GestureDetector(
+            onTap: widget.onParentTap,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              child: Row(
+                children: [
+                  Text(
+                    widget.link['label'],
+                    style: AppTheme.navLabel.copyWith(
+                      color: _hovered ? AppTheme.primary : AppTheme.dark,
+                    ),
                   ),
-                ),
-                const SizedBox(width: 4),
-                Icon(Icons.keyboard_arrow_down,
-                    size: 16,
-                    color: _hovered ? AppTheme.primary : AppTheme.darkGrey),
-              ],
+                  const SizedBox(width: 4),
+                  Icon(Icons.keyboard_arrow_down,
+                      size: 16,
+                      color: _hovered ? AppTheme.primary : AppTheme.darkGrey),
+                ],
+              ),
             ),
           ),
           if (_hovered)

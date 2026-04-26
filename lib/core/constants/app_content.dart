@@ -19,6 +19,7 @@ class AppContent {
   // ─── NAV LINKS ────────────────────────────────────────────
   static const List<Map<String, dynamic>> navLinks = [
     {'label': 'Home', 'url': '#home'},
+    {'label': 'Our Services', 'url': '#services'},
     {'label': 'Doctors', 'url': '#doctors'},
     {'label': 'Services', 'url': '#services'},
     {'label': 'Branches', 'url': '#branches'},
