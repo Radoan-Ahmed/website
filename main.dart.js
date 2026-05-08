@@ -89368,8 +89368,8 @@ A.alW.prototype={
 $0(){return this.a.d=!1},
 $S:0}
 A.KQ.prototype={
-I(a){var s=this,r=null,q=A.bw(a,r,t.l).w.a.a<900,p=q?24:80,o=t.p,n=q?A.bY(A.b([s.MZ(),B.fK,s.N4(),B.fK,s.MY("AHR(Mirpur-10)",B.oJ),B.fK],o),B.Z,B.t,B.v):A.cP(A.b([A.eo(s.MZ(),3),B.lH,A.eo(s.N4(),2),B.lH,A.eo(s.MY("Dhanmondi Clinic",B.oJ),2),B.lH],o),B.Z,B.t,B.v,0)
-return A.bY(A.b([A.bR(r,n,B.n,B.n6,r,r,r,r,r,new A.ad(p,60,p,60),r,r,r),A.bR(r,A.cP(A.b([A.aX("",r,r,r,A.bX().$2$color$fontSize(B.jq,13),r,r,r),A.aX("",r,r,r,A.bX().$2$color$fontSize(B.jq,12),r,r,r)],o),B.C,B.fj,B.v,0),B.n,B.dA,r,r,r,r,r,B.Fg,r,r,r)],o),B.C,B.t,B.v)},
+I(a){var s=this,r=null,q="AHR(Mirpur-10)",p=A.bw(a,r,t.l).w.a.a<900,o=p?24:80,n=t.p,m=p?A.bY(A.b([s.MZ(),B.fK,s.N4(),B.fK,s.MY(q,B.oJ),B.fK],n),B.Z,B.t,B.v):A.cP(A.b([A.eo(s.MZ(),3),B.lH,A.eo(s.N4(),2),B.lH,A.eo(s.MY(q,B.oJ),2),B.lH],n),B.Z,B.t,B.v,0)
+return A.bY(A.b([A.bR(r,m,B.n,B.n6,r,r,r,r,r,new A.ad(o,60,o,60),r,r,r),A.bR(r,A.cP(A.b([A.aX("",r,r,r,A.bX().$2$color$fontSize(B.jq,13),r,r,r),A.aX("",r,r,r,A.bX().$2$color$fontSize(B.jq,12),r,r,r)],n),B.C,B.fj,B.v,0),B.n,B.dA,r,r,r,r,r,B.Fg,r,r,r)],n),B.C,B.t,B.v)},
 MZ(){var s=null,r=A.zm("https://awcbd.org/wp-content/uploads/2024/11/white_logo.webp",new A.a4O(),s,50,s),q=A.aX("We offer alternative functional medicine consultation, regenerative therapies, and evidence-based Nutrition in addition to Modern Medicine to complete the reverse of your health conditions.",s,s,s,A.bX().$3$color$fontSize$height(B.eN,13,1.7),s,s,s),p=A.aX("",s,s,s,A.bX().$3$color$fontSize$fontStyle(B.jv,11,B.bo),s,s,s),o=t.ZY
 o=A.a0(new A.Y(B.HR,new A.a4P(),o),o.h("af.E"))
 return A.bY(A.b([r,B.bu,q,B.iA,p,B.iA,A.cP(o,B.C,B.t,B.v,0)],t.p),B.Z,B.t,B.v)},
