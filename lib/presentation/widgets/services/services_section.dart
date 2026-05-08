@@ -119,7 +119,32 @@ class _ServiceCardState extends State<_ServiceCard> {
                   ),
                   const SizedBox(height: 14),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (_) => AlertDialog(
+                          title: Text(
+                            widget.service.title,
+                            style: AppTheme.heading4,
+                          ),
+                          content: SingleChildScrollView(
+                            child: Text(
+                              widget.service.description,
+                              style: AppTheme.bodyMedium,
+                            ),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(),
+                              child: Text(
+                                'Close',
+                                style: TextStyle(color: AppTheme.primary),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                     child: Row(
                       children: [
                         Text(

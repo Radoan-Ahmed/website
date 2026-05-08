@@ -93,7 +93,7 @@ class _NavBarState extends State<NavBar> {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        'AWC',
+                        'AHR',
                         style: GoogleFonts.playfairDisplay(
                           fontSize: 22,
                           fontWeight: FontWeight.w700,

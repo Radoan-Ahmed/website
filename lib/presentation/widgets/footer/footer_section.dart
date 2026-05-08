@@ -26,10 +26,10 @@ class FooterSection extends StatelessWidget {
                     _buildServicesCol(),
                     const SizedBox(height: 40),
                     _buildBranchCol(
-                        'Dhanmondi Clinic', AppContent.footerBranch1),
+                        'AHR(Mirpur-10)', AppContent.footerBranch1),
                     const SizedBox(height: 40),
-                    _buildBranchCol(
-                        'Bashundhara R/A Clinic', AppContent.footerBranch2),
+                    // _buildBranchCol(
+                    //     'Bashundhara R/A Clinic', AppContent.footerBranch2),
                   ],
                 )
               : Row(
@@ -44,10 +44,10 @@ class FooterSection extends StatelessWidget {
                         child: _buildBranchCol(
                             'Dhanmondi Clinic', AppContent.footerBranch1)),
                     const SizedBox(width: 40),
-                    Expanded(
-                        flex: 2,
-                        child: _buildBranchCol('Bashundhara R/A Clinic',
-                            AppContent.footerBranch2)),
+                    // Expanded(
+                    //     flex: 2,
+                    //     child: _buildBranchCol('Bashundhara R/A Clinic',
+                    //         AppContent.footerBranch2)),
                   ],
                 ),
         ),
@@ -140,8 +140,8 @@ class FooterSection extends StatelessWidget {
 
   IconData _iconFromType(String type) {
     switch (type) {
-      case 'email':
-        return Icons.email_outlined;
+      // case 'email':
+      //   return Icons.email_outlined;
       case 'phone':
         return Icons.phone_outlined;
       default:

@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 // ── FEATURE CARDS ─────────────────────────
-                FeaturesSection(features: state.features),
+                // FeaturesSection(features: state.features),
 
                 // ── ABOUT ─────────────────────────────────
                 SizedBox(
@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 // ── STATS ─────────────────────────────────
-                StatsSection(stats: state.stats),
+                // StatsSection(stats: state.stats),
 
                 // ── DOCTORS ───────────────────────────────
                 SizedBox(
@@ -141,13 +141,13 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 // ── TESTIMONIALS ──────────────────────────
-                TestimonialsSection(testimonials: state.testimonials),
+                // TestimonialsSection(testimonials: state.testimonials),
 
                 // ── NEWS ──────────────────────────────────
-                SizedBox(
-                  key: _sectionKeys['#blog'],
-                  child: NewsSection(news: state.news),
-                ),
+                // SizedBox(
+                //   key: _sectionKeys['#blog'],
+                //   child: NewsSection(news: state.news),
+                // ),
 
                 // ── FOOTER ────────────────────────────────
                 SizedBox(

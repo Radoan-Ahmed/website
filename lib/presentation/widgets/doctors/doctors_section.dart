@@ -89,9 +89,10 @@ class _DoctorCardState extends State<_DoctorCard> {
                 child: Stack(
                   fit: StackFit.expand,
                   children: [
-                    Icon(Icons.person,
-                        size: 80,
-                        color: AppTheme.primary.withOpacity(0.4)),
+                    Image.asset(
+                      'assets/images/doctor_image.jpeg',
+                      fit: BoxFit.cover,
+                    ),
                     if (_hovered)
                       Container(
                         color: AppTheme.primary.withOpacity(0.1),

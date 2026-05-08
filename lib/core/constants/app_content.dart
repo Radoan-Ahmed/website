@@ -10,10 +10,10 @@ class AppContent {
       'https://awcbd.org/wp-content/uploads/2024/11/white_logo.webp';
   static const String faviconUrl =
       'https://awcbd.org/wp-content/uploads/2024/11/favicon.png';
-  static const String clinicName = 'American Wellness Center';
+  static const String clinicName = 'Acu Life Healthcare & Research';
   static const String clinicTagline =
-      'The First and Only Integrative Center In Bangladesh';
-  static const String phone = '+8809666-747470';
+      'The Integrative Health & Research Centre in Bangladesh';
+  static const String phone = '01568099036';
   static const String email = 'awc.health@gmail.com';
 
   // ─── NAV LINKS ────────────────────────────────────────────
@@ -29,7 +29,7 @@ class AppContent {
       'children': [
         {'label': 'Meet Our Founder', 'url': '#founder'},
         {'label': 'Blog', 'url': '#blog'},
-      ]
+      ],
     },
     {'label': 'Contact Us', 'url': '#contact'},
   ];
@@ -38,14 +38,14 @@ class AppContent {
   static const List<Map<String, String>> heroSlides = [
     {
       'title': 'ঔষুধ মুক্ত, সুস্থ জীবন',
-      'subtitle': 'The First and Only Integrative Center In Bangladesh',
+      'subtitle': 'The Integrative Health & Research Centre in Bangladesh',
       'buttonText': 'OUR SERVICES',
       'buttonUrl': '#services',
       'image':
           'https://awcbd.org/wp-content/uploads/2024/12/AWC-Website-Banner-03.webp',
     },
     {
-      'title': 'Holistic Health & Wellness',
+      'title': 'Integrative Health & Research',
       'subtitle': 'Modern Medicine meets Natural Functional Healing',
       'buttonText': 'BOOK APPOINTMENT',
       'buttonUrl': '#appointment',
@@ -105,77 +105,283 @@ class AppContent {
   // ─── SERVICES ─────────────────────────────────────────────
   static const String servicesSectionTitle = 'Premium Medical Services';
   static const String servicesSectionSubtitle =
-      'We are rated the best Integrative and Functional Medicine clinic in the United States of America.';
+      'We are rated the best Integrative Center in Bangladesh.';
 
   static const List<Map<String, String>> services = [
     {
       'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_1.webp',
-      'title': 'Vitamin Shots',
-      'description':
-          'IM vitamin therapy is a way of delivering nourishing vitamins, minerals, antioxidants, amino acids, and more, right to a person\'s bloodstream.',
+      'title': 'Acupuncture',
+      'description': '''🩺 Acupuncture – A Natural Path to Healing
+
+        Acupuncture is a time-tested therapeutic technique that involves inserting very fine, sterile needles into specific points on the body. It is widely used to relieve pain, restore balance, and support the body’s natural healing process.
+
+        ### 🔬 How Does Acupuncture Work?
+
+        Acupuncture stimulates specific points (acupoints) along the body’s energy pathways. This helps to—
+
+        * Improve blood circulation
+        * Regulate the nervous system
+        * Reduce inflammation and pain
+        * Promote natural healing and balance
+
+        ### 🌿 Benefits of Acupuncture
+
+        Acupuncture can be effective for a wide range of conditions, including:
+
+        * Chronic pain (neck, back, shoulder, knee)
+        * Migraine and tension headaches
+        * Stress, anxiety, and insomnia
+        * Digestive disorders (IBS, bloating, indigestion)
+        * Hormonal imbalance and infertility support
+        * Arthritis and joint problems
+        * General fatigue and low energy
+
+        ### 👩‍⚕️ Who Can Benefit?
+
+        Acupuncture is suitable for most adults. However, you should consult a professional if you are:
+
+        * Pregnant
+        * Suffering from bleeding disorders
+        * Using a pacemaker (in case of electro-acupuncture)
+        * Extremely weak or medically unstable
+
+        ### ⚠️ Safety & Hygiene
+
+        All treatments are performed using *single-use, sterile, disposable needles* in a clean and hygienic environment to ensure maximum safety and comfort.
+
+        ### 🏥 Why Choose Us?
+
+        * Certified and experienced practitioners
+        * Evidence-based and personalized care
+        * Safe, painless, and effective techniques
+        * Calm and comfortable treatment setting
+
+        ### 📞 Book an Appointment
+
+        Restore your body’s balance naturally. Contact us today to schedule your acupuncture session.''',
       'url': '#services',
     },
+
     {
       'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_2.webp',
-      'title': 'Ozone Therapies',
-      'description':
-          'Medical Ozone Therapy is used to detox, kill infection treat disease, boost the immune system and improve the body\'s intake and use of oxygen.',
+      'title': 'Cupping Therapy',
+      'description': '''🩺 Hijama (Cupping Therapy) – A Natural Healing Method
+
+Hijama, also known as Cupping Therapy, is an ancient and effective treatment method used to promote natural healing. It involves placing special cups on specific points of the body to create suction, which helps improve blood circulation and remove harmful toxins.
+
+🔬 How Does Hijama Work?
+
+Hijama works by creating negative pressure on the skin using suction cups. This process—
+
+Enhances blood circulation
+Helps eliminate toxins from the body
+Relieves muscle tension and pain
+Stimulates the body’s natural healing process.🌿 Benefits of Hijama
+
+Hijama can be beneficial for a variety of health conditions, including:
+
+Chronic headaches and migraines
+Neck, shoulder, and lower back pain
+Joint pain and arthritis
+Digestive issues (gas, indigestion, IBS)
+High blood pressure (as supportive care)
+Stress, anxiety, and insomnia
+Skin conditions (acne, eczema)👩‍⚕️ Who Can Take Hijama?
+
+Hijama is suitable for both men and women. However, it is recommended to consult a healthcare professional if you are:
+
+Pregnant
+Severely weak or underweight
+Suffering from anemia or certain medical conditions
+⚠️ Safety & Hygiene
+
+We ensure that all Hijama procedures are performed in a completely sterile and hygienic environment. Disposable cups and blades are used for every session to eliminate any risk of infection.🏥 Why Choose Us?
+Trained and experienced practitioners
+Safe and modern equipment
+Personalized treatment plans
+Comfortable and private environment
+📞 Book an Appointment
+
+Take a step toward natural healing. Contact us today to book your Hijama session and experience the benefits.''',
       'url': '#services',
     },
     {
       'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_3.webp',
-      'title': 'Treatment Plan',
-      'description':
-          'A personalized treatment plan is like a customized roadmap to recovery, giving guidance and direction tailored to your needs.',
+      'title': 'Bio-Purification',
+      'description': '''🩺Bio-Purification Therapy – Detox & Restore Naturally
+
+Bio-Purification Therapy is a holistic treatment approach designed to cleanse the body, eliminate toxins, and restore internal balance. It combines natural methods and therapeutic techniques to support the body’s own healing and detoxification processes.
+
+🔬 How Does Bio-Purification Work?
+
+Bio-Purification focuses on enhancing the body’s natural detox pathways. This therapy helps to—
+
+Remove accumulated toxins from the body
+Improve blood circulation and metabolism
+Support liver and digestive function
+Strengthen the immune system.🌿 Benefits of Bio-Purification
+
+This therapy can be helpful for various conditions, including:
+
+Chronic fatigue and low energy
+Digestive disorders (gas, bloating, constipation)
+Skin problems (acne, eczema, dull skin)
+Hormonal imbalance
+Stress and poor sleep
+General body detox and wellness.wellness
+👩‍⚕️ Who Can Benefit?
+
+Bio-Purification Therapy is suitable for most individuals seeking natural detox and wellness support. However, consultation is recommended for:
+
+Pregnant women
+Patients with chronic or serious medical conditions
+Individuals with severe weakness or nutritional deficiencies
+⚠️ Safety & Approach
+
+Our Bio-Purification programs are conducted in a safe, hygienic, and controlled environment using carefully selected natural methods. Each treatment plan is customized based on the patient’s condition and health goals.🏥 Why Choose Us?
+Experienced and trained practitioners
+Personalized detox programs
+Integration of traditional and modern approaches
+Comfortable and patient-friendly environment
+📞 Book an Appointment
+
+Cleanse your body and rejuvenate your health naturally. Contact us today to start your Bio-Purification journey.''',
+
       'url': '#services',
     },
     {
       'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_4.webp',
-      'title': 'Naturopathy',
-      'description':
-          'With proper nutritional counseling and supplementation we assist the body\'s healing process through natural means without surgery or drugs.',
+      'title': 'Natural Medicine',
+      'description': '''
+🌿 Natural Medicine – Healing the Body the Natural Way
+
+Natural Medicine is a holistic approach to healthcare that focuses on using natural therapies, lifestyle changes, and preventive care to restore and maintain health. It aims to treat the root cause of illness rather than just managing symptoms.
+
+🔬 How Does Natural Medicine Work?
+
+Natural Medicine supports the body’s innate healing ability through safe and effective methods. This approach helps to—
+
+Strengthen the immune system
+Restore internal balance
+Improve digestion and metabolism
+Enhance overall physical and mental well-being
+
+It may include herbal remedies, nutrition, lifestyle guidance, and non-invasive therapeutic techniques.
+
+🌿 Benefits of Natural Medicine
+
+Natural Medicine can be beneficial for a wide range of conditions, such as:
+
+Digestive disorders (gas, indigestion, IBS)
+Hormonal imbalance and infertility support
+Chronic fatigue and weakness
+Stress, anxiety, and sleep disorders
+Skin conditions (acne, eczema, allergies)
+Joint pain and inflammation
+👩‍⚕️ Who Can Benefit?
+
+Natural Medicine is suitable for people of all ages who prefer a safe and holistic approach to health. It is especially helpful for those looking for long-term wellness and prevention.
+
+However, professional consultation is recommended for:
+
+Pregnant women
+Patients with chronic or serious illnesses
+Individuals taking long-term medications
+⚠️ Safety & Approach
+
+We follow a safe, evidence-informed, and patient-centered approach. All treatments are tailored to individual needs, ensuring effective and sustainable results.
+
+🏥 Why Choose Us?
+Experienced and qualified practitioners
+Personalized treatment plans
+Combination of traditional wisdom and modern understanding
+Focus on long-term health and prevention
+📞 Book an Appointment
+
+Choose a natural path to better health. Contact us today to begin your journey toward balanced and healthy living.''',
       'url': '#services',
     },
     {
       'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_5.webp',
-      'title': 'Natural Supplementation',
-      'description':
-          'Natural supplements have been gaining popularity as more people are looking for ways to improve their health and wellbeing.',
+      'title': 'Doctor Consultation',
+      'description': '''🩺Doctor Consultation – Personalized Care You Can Trust
+
+Doctor Consultation is the first and most important step toward accurate diagnosis and effective treatment. Our consultation service is designed to understand your health concerns in detail and provide a personalized care plan tailored to your needs.
+
+🔬 What to Expect During Consultation?
+
+During your consultation, our doctor will—
+
+Listen carefully to your symptoms and medical history
+Perform necessary clinical evaluation
+Identify the root cause of your condition
+Provide a clear diagnosis and treatment plan
+Recommend suitable therapies and lifestyle guidance
+🌿 Our Approach
+
+We follow a holistic and patient-centered approach, combining clinical expertise with natural and supportive therapies. Our goal is not only to treat illness but also to improve your overall health and well-being.
+
+👩‍⚕️ Conditions We Address
+
+Our consultation covers a wide range of health concerns, including:
+
+Digestive disorders (gas, acidity, IBS)
+Pain management (neck, back, joints)
+Hormonal imbalance and infertility support
+Skin conditions
+Stress, anxiety, and sleep disorders
+General health and preventive care
+⚠️ Why Consultation Matters
+
+Proper consultation ensures—
+
+Early detection of health issues
+Accurate and safe treatment
+Prevention of complications
+Better long-term health outcomes
+🏥 Why Choose Us?
+Qualified and experienced doctor
+Personalized treatment plans
+Friendly and confidential environment
+Integration of natural and modern therapies
+📞 Book Your Consultation
+
+Take control of your health today. Book your consultation and get expert guidance for a healthier life.''',
       'url': '#services',
     },
-    {
-      'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_6.webp',
-      'title': 'Modern Acupuncture',
-      'description':
-          'Acupuncture is a nearly 2,000-year-old traditional Chinese medicine technique that stimulates specific points on the body.',
-      'url': '#services',
-    },
+    // {
+    //   'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_6.webp',
+    //   'title': 'Modern Acupuncture',
+    //   'description':
+    //       'Acupuncture is a nearly 2,000-year-old traditional Chinese medicine technique that stimulates specific points on the body.',
+    //   'url': '#services',
+    // },
   ];
 
   // ─── CLINIC HOURS ─────────────────────────────────────────
-  static const String hoursSectionTitle = 'Clean, Caring & Friendly Environment';
+  static const String hoursSectionTitle =
+      'Clean, Caring & Friendly Environment';
   static const String hoursSubtitle = 'Clinic Opening Hours';
   static const String hoursDescription =
       'Our friendly receptionist is ready to assist you during our working hours.';
   static const List<Map<String, String>> clinicHours = [
-    {'day': 'Sunday', 'hours': '09:00 am - 19:00 pm'},
-    {'day': 'Monday', 'hours': '09:00 am - 19:00 pm'},
-    {'day': 'Tuesday', 'hours': '09:00 am - 19:00 pm'},
-    {'day': 'Wednesday', 'hours': '09:00 am - 19:00 pm'},
-    {'day': 'Thursday', 'hours': '09:00 am - 19:00 pm'},
-    {'day': 'Friday', 'hours': '09:00 am - 19:00 pm'},
-    {'day': 'Saturday', 'hours': '09:00 am - 19:00 pm'},
+    {'day': 'Sunday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Monday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Tuesday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Wednesday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Thursday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Friday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Saturday', 'hours': '04:00 pm - 10:00 pm'},
   ];
   static const String hoursImage =
       'https://awcbd.org/wp-content/uploads/2024/11/AWC-Website-Banner-04.webp';
 
   // ─── APPOINTMENT ──────────────────────────────────────────
-  static const String appointmentTitle =
-      'Need an Advice from Expert Doctor?';
+  static const String appointmentTitle = 'Need an Advice from Expert Doctor?';
   static const String appointmentSubtitle = 'Get An Appointment Today!';
   static const String appointmentCallText =
       'To speak with a representative, Call us';
-  static const String appointmentPhone = '+8809666-747470';
+  static const String appointmentPhone = '01568099036';
 
   // ─── STATS ────────────────────────────────────────────────
   static const List<Map<String, String>> stats = [
@@ -188,60 +394,15 @@ class AppContent {
   // ─── DOCTORS ──────────────────────────────────────────────
   static const String doctorsSectionTitle = 'Meet our Doctors';
   static const String doctorsSectionSubtitle =
-      'We have the best board-certified naturopathic doctors and licensed by Guardian of Ecclesial Medical Association (GEMA)';
+      'We have the best certified naturopathic doctors registered by Directorate General of Health Services(DGHS)';
 
   static const List<Map<String, String>> doctors = [
     {
-      'name': 'Dr. Atiqul Haq Mazumder',
-      'qualification': 'MBBS, MD (Psychiatry), PhD (Psychiatry)',
+      'name': 'Dr. Shurab Hossain',
+      'qualification': 'PhD(F),Mphil,FCPA(India)MPH(NHFR&I),BAMS(DU)',
       'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
       'url': '#doctors',
-    },
-    {
-      'name': 'Dr. Shaiful Islam Patwary',
-      'qualification': 'MBBS, MD (BSMMU), CCD (BIRDEM); C-Card (NHF), UIH (USA)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
-    {
-      'name': 'Dr. Ejaj Mahamud',
-      'qualification': 'BAMS (DU), CMU (Ultra), CIN (USA)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
-    {
-      'name': 'Dr. Mahamuda Akhter',
-      'qualification':
-          'MBBS, CCD, DMU (Ultra), Trained in Integrative Treatment and Functional Medicine',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
-    {
-      'name': 'Dr. Md. Ariful Islam',
-      'qualification': 'BAMS (DU), MPH (NSU), CHN (USA)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
-    {
-      'name': 'Dr. Md Moshfiqur Rahman',
-      'qualification':
-          'Acupuncture Specialist, BUMS (DU), DDCM&V (WAUCM), MD-Acupuncture (China)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
-    {
-      'name': 'Dr. Pijush Sarkar',
-      'qualification':
-          'Physiotherapist, BPT (DU), ACMT (INDIA), Trained in Integrative & Functional Medicine (USA)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
-    {
-      'name': 'Dr. S M Anowar Hossen',
-      'qualification': 'MBBS, FCPS (Medicine), BCS (Health)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
-      'url': '#doctors',
-    },
+    }
   ];
 
   // ─── TESTIMONIALS ─────────────────────────────────────────
@@ -279,30 +440,24 @@ class AppContent {
 
   static const List<Map<String, String>> newsItems = [
     {
-      'title':
-          'Excepteur sint occaecat cupidatat non proident, sunt mollit',
+      'title': 'Excepteur sint occaecat cupidatat non proident, sunt mollit',
       'date': 'December 15, 2024',
       'category': 'Health',
-      'image':
-          'https://awcbd.org/wp-content/uploads/2024/11/s_1.webp',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_1.webp',
       'url': '#blog',
     },
     {
-      'title':
-          'Consectetur adipisicing elit. Architecto, voluptatem! abitas',
+      'title': 'Consectetur adipisicing elit. Architecto, voluptatem! abitas',
       'date': 'December 10, 2024',
       'category': 'Wellness',
-      'image':
-          'https://awcbd.org/wp-content/uploads/2024/11/s_2.webp',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_2.webp',
       'url': '#blog',
     },
     {
-      'title':
-          'Eiusmod tempor incididunt labore sed at dolore magna aliqua',
+      'title': 'Eiusmod tempor incididunt labore sed at dolore magna aliqua',
       'date': 'December 5, 2024',
       'category': 'Medicine',
-      'image':
-          'https://awcbd.org/wp-content/uploads/2024/12/s_3.webp',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_3.webp',
       'url': '#blog',
     },
   ];
@@ -311,46 +466,42 @@ class AppContent {
   static const String footerAbout =
       'We offer alternative functional medicine consultation, regenerative therapies, and evidence-based Nutrition in addition to Modern Medicine to complete the reverse of your health conditions.';
   static const String footerLicense =
-      'Trade License Number: TRAD/DNCC/033876/2025';
+      '';
 
   static const List<Map<String, String>> socialLinks = [
     {'label': 'Facebook', 'url': 'https://www.facebook.com/awc.health'},
     {
       'label': 'Youtube',
-      'url': 'https://www.youtube.com/channel/UCcXjY_VSZGQvmuhJMg7hzLw'
+      'url': 'https://www.youtube.com/channel/UCcXjY_VSZGQvmuhJMg7hzLw',
     },
     {'label': 'Instagram', 'url': 'https://www.instagram.com/awcbd.health/'},
     {
       'label': 'Linkedin',
-      'url': 'https://www.linkedin.com/in/american-wellness-center-bd/'
+      'url': 'https://www.linkedin.com/in/american-wellness-center-bd/',
     },
   ];
 
   static const List<Map<String, String>> footerServices = [
-    {'label': 'Hospital', 'url': '#branches'},
-    {'label': 'Medicine Shop', 'url': '#services'},
-    {'label': 'Doctor', 'url': '#doctors'},
-    {'label': 'Green Kitchen', 'url': '#services'},
-    {'label': 'Privacy Policy', 'url': '#privacy'},
-    {'label': 'Terms & Conditions', 'url': '#terms'},
-    {'label': 'Returns & Exchanges', 'url': '#returns'},
+    {'label': 'Acupuncture', 'url': '#branches'},
+    {'label': 'Cupping Therapy', 'url': '#services'},
+    {'label': 'Bio-Purification', 'url': '#doctors'},
+    {'label': 'Natural Medicine', 'url': '#services'},
+    {'label': '''Doctor's Consultation''', 'url': '#privacy'},
   ];
 
   static const List<Map<String, String>> footerBranch1 = [
     {
       'icon': 'location',
-      'text':
-          'Islam Tower, Shukrabad Bus Stand, Dhaka, Bangladesh'
+      'text': 'Save On Health Care,Mirpur-10 Opposite of Mirpur Girls Ideal High School',
     },
-    {'icon': 'email', 'text': 'awc.health@gmail.com'},
-    {'icon': 'phone', 'text': '+8809666-747470'},
+    // {'icon': 'email', 'text': ''},
+    {'icon': 'phone', 'text': '01568099036'},
   ];
 
   static const List<Map<String, String>> footerBranch2 = [
     {
       'icon': 'location',
-      'text':
-          'Bashundhara Main Gate, South Side of Jamuna Future Park, Dhaka'
+      'text': 'Bashundhara Main Gate, South Side of Jamuna Future Park, Dhaka',
     },
     {'icon': 'email', 'text': 'awc.health@gmail.com'},
     {'icon': 'phone', 'text': '09639-670670'},

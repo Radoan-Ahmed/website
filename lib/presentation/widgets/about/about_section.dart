@@ -43,10 +43,10 @@ class AboutSection extends StatelessWidget {
         const SizedBox(height: 20),
         Text(AppContent.aboutBody, style: AppTheme.bodyLarge),
         const SizedBox(height: 24),
-        Text(AppContent.aboutSubtitle,
-            style: AppTheme.heading4.copyWith(color: AppTheme.primary)),
-        const SizedBox(height: 16),
-        _FeatureGrid(features: AppContent.aboutFeatures),
+        // Text(AppContent.aboutSubtitle,
+        //     style: AppTheme.heading4.copyWith(color: AppTheme.primary)),
+        // const SizedBox(height: 16),
+        // _FeatureGrid(features: AppContent.aboutFeatures),
       ],
     );
   }
