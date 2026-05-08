@@ -35,7 +35,7 @@ class AWCApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
-          title: 'American Wellness Center',
+          title: 'Acu Life Health Care',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.theme,
           home: const HomePage(),

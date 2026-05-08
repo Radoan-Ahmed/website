@@ -410,7 +410,7 @@ Take control of your health today. Book your consultation and get expert guidanc
     {
       'title': 'A Truly Transformative Experience!',
       'review':
-          'I had been struggling with chronic pain for years and tried various treatments with no lasting relief. When I found American Wellness Center, I was amazed at how different their approach was. Their integrative treatments combine the best of modern medicine with holistic therapies, all tailored to my specific needs. After just a few sessions, I started feeling better physically and mentally.',
+          'I had been struggling with chronic pain for years and tried various treatments with no lasting relief. When I found Acu Life Health Care, I was amazed at how different their approach was. Their integrative treatments combine the best of modern medicine with holistic therapies, all tailored to my specific needs. After just a few sessions, I started feeling better physically and mentally.',
       'name': 'Ayesha S.',
       'location': 'Dhaka',
       'avatar': 'https://awcbd.org/wp-content/uploads/2024/12/user.png',
@@ -418,7 +418,7 @@ Take control of your health today. Book your consultation and get expert guidanc
     {
       'title': 'A Unique and Holistic Approach to Wellness',
       'review':
-          'As someone who has always valued both traditional and alternative health practices, I was excited to find the American Wellness Center. Their personalized care has exceeded my expectations in every way. Whether it\'s acupuncture, chiropractic care, or nutritional counseling, every service is top-notch. I\'ve experienced significant improvements in my energy levels and overall health.',
+          'As someone who has always valued both traditional and alternative health practices, I was excited to find the Acu Life Health Care. Their personalized care has exceeded my expectations in every way. Whether it\'s acupuncture, chiropractic care, or nutritional counseling, every service is top-notch. I\'ve experienced significant improvements in my energy levels and overall health.',
       'name': 'Ruhul Amin',
       'location': 'Chittagong',
       'avatar': 'https://awcbd.org/wp-content/uploads/2024/12/user.png',
