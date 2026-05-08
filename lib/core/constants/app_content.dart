@@ -37,7 +37,7 @@ class AppContent {
   // ─── HERO SLIDES ─────────────────────────────────────────
   static const List<Map<String, String>> heroSlides = [
     {
-      'title': 'ঔষুধ মুক্ত, সুস্থ জীবন',
+      'title': 'সমন্বিত চিকিৎসা সেবা ও সুস্থ জীবন',
       'subtitle': 'The Integrative Health & Research Centre in Bangladesh',
       'buttonText': 'OUR SERVICES',
       'buttonUrl': '#services',
@@ -507,5 +507,5 @@ Take control of your health today. Book your consultation and get expert guidanc
     {'icon': 'phone', 'text': '09639-670670'},
   ];
 
-  static const String copyright = '© 2024 AWCBD. All rights reserved';
+  static const String copyright = '';
 }

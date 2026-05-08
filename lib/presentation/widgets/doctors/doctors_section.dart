@@ -91,7 +91,7 @@ class _DoctorCardState extends State<_DoctorCard> {
                   children: [
                     Image.asset(
                       'assets/images/doctor_image.jpeg',
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                     if (_hovered)
                       Container(
