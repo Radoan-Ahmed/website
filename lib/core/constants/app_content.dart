@@ -24,7 +24,10 @@ class AppContent {
     {'label': 'Training', 'url': '#training'},
     {'label': 'Opening Hours', 'url': '#hourseSection'},
     {'label': 'Video & Photo Galary', 'url': '#product'},
-    {'label': 'View Map', 'url': '#branches'},  // scrolls to map section or navigates to /location
+    {
+      'label': 'View Map',
+      'url': '#branches',
+    }, // scrolls to map section or navigates to /location
     {
       'label': 'About Us',
       'url': '#about',
@@ -204,44 +207,14 @@ class AppContent {
     {
       'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_2.webp',
       'title': 'Cupping Therapy',
-      'description': '''🩺 Hijama (Cupping Therapy) – A Natural Healing Method
+      'description': '''🩺 Benefit of Cupping (Hijama)
+Hijama may help promote relaxation, support circulation, reduce muscle tension, and contribute to overall wellness when performed properly.
 
-Hijama, also known as Cupping Therapy, is an ancient and effective treatment method used to promote natural healing. It involves placing special cups on specific points of the body to create suction, which helps improve blood circulation and remove harmful toxins.
+Who Can Take Hijama?
+Suitable for adults seeking supportive care for stress, body discomfort, fatigue, or general well-being after professional consultation.
 
-🔬 How Does Hijama Work?
-
-Hijama works by creating negative pressure on the skin using suction cups. This process—
-
-Enhances blood circulation
-Helps eliminate toxins from the body
-Relieves muscle tension and pain
-Stimulates the body’s natural healing process.🌿 Benefits of Hijama
-
-Hijama can be beneficial for a variety of health conditions, including:
-
-Chronic headaches and migraines
-Neck, shoulder, and lower back pain
-Joint pain and arthritis
-Digestive issues (gas, indigestion, IBS)
-High blood pressure (as supportive care)
-Stress, anxiety, and insomnia
-Skin conditions (acne, eczema)👩‍⚕️ Who Can Take Hijama?
-
-Hijama is suitable for both men and women. However, it is recommended to consult a healthcare professional if you are:
-
-Pregnant
-Severely weak or underweight
-Suffering from anemia or certain medical conditions
-⚠️ Safety & Hygiene
-
-We ensure that all Hijama procedures are performed in a completely sterile and hygienic environment. Disposable cups and blades are used for every session to eliminate any risk of infection.🏥 Why Choose Us?
-Trained and experienced practitioners
-Safe and modern equipment
-Personalized treatment plans
-Comfortable and private environment
-📞 Book an Appointment
-
-Take a step toward natural healing. Contact us today to book your Hijama session and experience the benefits.''',
+Why Choose Us?
+Professional care • Hygienic procedure • Personalized approach • Patient comfort and safety first.''',
       'url': '#services',
     },
     {
@@ -438,22 +411,35 @@ Take control of your health today. Book your consultation and get expert guidanc
   static const List<Map<String, String>> doctors = [
     {
       'name': 'Dr. Shurab Hossain',
-      'qualification': 'PhD(F),Mphil,FCPA(India)MPH(NHFR&I),BAMS(DU)',
+      'qualification':
+          'PhD (JU), M.Phil (Pharm), FCPA (India)\n'
+          'MPH (Com. Med), BAMS (DU)\n'
+          'Advanced Diploma in Acupuncture\n'
+          'Advanced training in AMC (Sri Lanka)',
+      'designation':
+          'Assistant Professor (AC)\n'
+          'Department of Ayurvedic Medicine\n'
+          'Govt. Unani & Ayurvedic Medical College & Hospital, Dhaka',
+      'role': 'Chief Consultant \nAcuLife Healthcare & Research',
       'image': 'assets/images/doctor_image.jpeg',
+      'url': '#doctors',
+    },
+    {
+      'name': 'Dr. Nazrin Sultana',
+      'qualification': 'BUMS (DU), CMU\nMS (Microbiology)',
+      'designation': 'Senior Lecturer, Hakim Said Eastern Medical College and Hospital, Dhaka',
+      'role': 'Chairman\nAcuLife Healthcare & Research',
+      'image': 'assets/images/female_doctor_image.jpg',
       'url': '#doctors',
     },
     {
       'name': 'Dr. Rakibul Hasan',
       'qualification': 'BUMS (DU)',
+      'designation': 'Medical officer and Coordinator',
+      'role': 'Medical officer\nAcuLife Healthcare & Research',
       'image': 'assets/images/rakib_doctor_image.jpeg',
       'url': '#doctors',
     },
-    {
-      'name': 'Dr. Nazrin Sultana',
-      'qualification': 'BUMS (DU), CMU, MS (Microbiology)',
-      'image': 'assets/images/female_doctor_image.jpg',
-      'url': '#doctors',
-    }
   ];
 
   // ─── TESTIMONIALS ─────────────────────────────────────────
@@ -519,12 +505,13 @@ Take control of your health today. Book your consultation and get expert guidanc
 
   static const Map<String, dynamic> branch1Location = {
     'name': 'Mirpur-10 Branch',
-    'address': 'Save On Health Care, Mirpur-10\nOpposite Mirpur Girls Ideal High School, Dhaka',
+    'address':
+        'Save On Health Care, Mirpur-10\nOpposite Mirpur Girls Ideal High School, Dhaka',
     'phone': '01568099036',
     'email': '',
-    'lat': 23.8057,   // ← change latitude here
-    'lng': 90.3707,   // ← change longitude here
-    'zoom': 17,       // ← 1 (world) – 20 (building). 16-18 is ideal for a clinic
+    'lat': 23.8057, // ← change latitude here
+    'lng': 90.3707, // ← change longitude here
+    'zoom': 17, // ← 1 (world) – 20 (building). 16-18 is ideal for a clinic
   };
 
   static const Map<String, dynamic> branch2Location = {
@@ -532,8 +519,8 @@ Take control of your health today. Book your consultation and get expert guidanc
     'address': 'Bashundhara Main Gate\nSouth Side of Jamuna Future Park, Dhaka',
     'phone': '09639-670670',
     'email': 'awc.health@gmail.com',
-    'lat': 23.8130,   // ← change latitude here
-    'lng': 90.4202,   // ← change longitude here
+    'lat': 23.8130, // ← change latitude here
+    'lng': 90.4202, // ← change longitude here
     'zoom': 17,
   };
 
@@ -618,8 +605,7 @@ Take control of your health today. Book your consultation and get expert guidanc
   // ─── FOOTER ───────────────────────────────────────────────
   static const String footerAbout =
       'We offer alternative functional medicine consultation, regenerative therapies, and evidence-based Nutrition in addition to Modern Medicine to complete the reverse of your health conditions.';
-  static const String footerLicense =
-      '';
+  static const String footerLicense = '';
 
   static const List<Map<String, String>> socialLinks = [
     {'label': 'Facebook', 'url': 'https://www.facebook.com/awc.health'},
@@ -645,7 +631,8 @@ Take control of your health today. Book your consultation and get expert guidanc
   static const List<Map<String, String>> footerBranch1 = [
     {
       'icon': 'location',
-      'text': 'Save On Health Care,Mirpur-10 Opposite of Mirpur Girls Ideal High School',
+      'text':
+          'Save On Health Care,Mirpur-10 Opposite of Mirpur Girls Ideal High School',
     },
     // {'icon': 'email', 'text': ''},
     {'icon': 'phone', 'text': '01568099036'},

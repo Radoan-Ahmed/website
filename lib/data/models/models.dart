@@ -58,12 +58,16 @@ class ServiceModel extends Equatable {
 class DoctorModel extends Equatable {
   final String name;
   final String qualification;
+  final String designation;
+  final String role;
   final String image;
   final String url;
 
   const DoctorModel({
     required this.name,
     required this.qualification,
+    required this.designation,
+    required this.role,
     required this.image,
     required this.url,
   });

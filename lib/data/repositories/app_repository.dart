@@ -43,6 +43,8 @@ class AppRepositoryImpl implements AppRepository {
         .map((d) => DoctorModel(
               name: d['name']!,
               qualification: d['qualification']!,
+              designation: d['designation']!,
+              role: d['role'] ?? '',
               image: d['image']!,
               url: d['url']!,
             ))

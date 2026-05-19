@@ -12,12 +12,14 @@ class DoctorsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final isMobile = width < 700;
-    final crossAxisCount = isMobile ? 1 : (width < 1000 ? 2 : 4);
+    final crossAxisCount = isMobile ? 1 : (width < 1000 ? 2 : 3);
 
     return Container(
       color: AppTheme.lightGrey,
       padding: EdgeInsets.symmetric(
-          horizontal: isMobile ? 24 : 80, vertical: 70),
+        horizontal: isMobile ? 24 : 80,
+        vertical: 70,
+      ),
       child: Column(
         children: [
           SectionHeader(
@@ -31,9 +33,9 @@ class DoctorsSection extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-              childAspectRatio: 0.9,
+              crossAxisSpacing: 24,
+              mainAxisSpacing: 24,
+              mainAxisExtent: 620,
             ),
             itemCount: doctors.length,
             itemBuilder: (ctx, i) => _DoctorCard(doctor: doctors[i]),
@@ -57,6 +59,20 @@ class _DoctorCardState extends State<_DoctorCard> {
 
   @override
   Widget build(BuildContext context) {
+    final doc = widget.doctor;
+    final qualLines = doc.qualification
+        .split('\n')
+        .where((l) => l.trim().isNotEmpty)
+        .toList();
+    final designLines = doc.designation
+        .split('\n')
+        .where((l) => l.trim().isNotEmpty)
+        .toList();
+    final roleLines = doc.role
+        .split('\n')
+        .where((l) => l.trim().isNotEmpty)
+        .toList();
+
     return MouseRegion(
       onEnter: (_) => setState(() => _hovered = true),
       onExit: (_) => setState(() => _hovered = false),
@@ -64,12 +80,12 @@ class _DoctorCardState extends State<_DoctorCard> {
         duration: const Duration(milliseconds: 250),
         decoration: BoxDecoration(
           color: AppTheme.white,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(_hovered ? 0.12 : 0.05),
-              blurRadius: _hovered ? 30 : 15,
-              offset: Offset(0, _hovered ? 10 : 4),
+              color: Colors.black.withValues(alpha: _hovered ? 0.12 : 0.05),
+              blurRadius: _hovered ? 32 : 14,
+              offset: Offset(0, _hovered ? 12 : 4),
             ),
           ],
         ),
@@ -77,63 +93,202 @@ class _DoctorCardState extends State<_DoctorCard> {
             ? (Matrix4.identity()..translate(0.0, -6.0))
             : Matrix4.identity(),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // ── Image ──────────────────────────────────────
             ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(12)),
-              child: Container(
-                height: 300,
-                width: double.infinity,
-                color: AppTheme.accent,
-                child: Stack(
-                  fit: StackFit.expand,
-                  children: [
-                    Image.asset(
-                      // 'assets/images/doctor_image.jpeg',
-                      widget.doctor.image,
-                      fit: BoxFit.fill,
-                    ),
-                    if (_hovered)
-                      Container(
-                        color: AppTheme.primary.withOpacity(0.1),
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(16)),
+              child: Stack(
+                children: [
+                  SizedBox(
+                    height: 270,
+                    width: double.infinity,
+                    child: Image.asset(
+                      doc.image,
+                      fit: BoxFit.cover,
+                      alignment: Alignment.topCenter,
+                      errorBuilder: (_, __, ___) => Container(
+                        color: AppTheme.accent,
+                        child: Icon(
+                          Icons.person,
+                          size: 64,
+                          color: AppTheme.primary,
+                        ),
                       ),
-                  ],
-                ),
+                    ),
+                  ),
+                  // Gradient overlay at bottom of image for smooth transition
+                  // Positioned(
+                  //   bottom: 0,
+                  //   left: 0,
+                  //   right: 0,
+                  //   child: Container(
+                  //     height: 60,
+                  //     decoration: BoxDecoration(
+                  //       gradient: LinearGradient(
+                  //         begin: Alignment.topCenter,
+                  //         end: Alignment.bottomCenter,
+                  //         colors: [
+                  //           Colors.transparent,
+                  //           AppTheme.white.withValues(alpha: 0.95),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                ],
               ),
             ),
+
+            // ── Info ───────────────────────────────────────
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Name
                     Text(
-                      widget.doctor.name,
-                      style: AppTheme.heading4.copyWith(fontSize: 14),
-                      textAlign: TextAlign.center,
+                      doc.name,
+                      style: AppTheme.heading4.copyWith(
+                        color: AppTheme.primary,
+                        fontSize: 16,
+                      ),
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      widget.doctor.qualification,
-                      style: AppTheme.bodySmall,
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 12),
-                    Container(
-                      width: 32,
-                      height: 2,
-                      color: _hovered
-                          ? AppTheme.primary
-                          : AppTheme.divider,
-                    ),
+                    const SizedBox(height: 10),
+
+                    // Qualifications block
+                    if (qualLines.isNotEmpty) ...[
+                      _BlockLabel(label: 'Qualifications'),
+                      const SizedBox(height: 6),
+                      ...qualLines.map(
+                        (line) => _InfoLine(text: line),
+                      ),
+                      const SizedBox(height: 10),
+                    ],
+
+                    // Divider
+                    _ThinDivider(),
+                    const SizedBox(height: 10),
+
+                    // Designation / Institution block
+                    if (designLines.isNotEmpty) ...[
+                      _BlockLabel(label: 'Position & Institution'),
+                      const SizedBox(height: 6),
+                      ...designLines.map(
+                        (line) => _InfoLine(text: line),
+                      ),
+                      const SizedBox(height: 10),
+                    ],
+
+                    // Role at AcuLife block
+                    if (roleLines.isNotEmpty) ...[
+                      _ThinDivider(),
+                      const SizedBox(height: 10),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 3,
+                            height: 36,
+                            decoration: BoxDecoration(
+                              color: AppTheme.primary,
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: roleLines
+                                  .map((line) => Text(
+                                        line,
+                                        style: AppTheme.bodySmall.copyWith(
+                                          fontWeight: FontWeight.w700,
+                                          color: AppTheme.dark,
+                                          height: 1.6,
+                                        ),
+                                      ))
+                                  .toList(),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ],
                 ),
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Helpers ─────────────────────────────────────────────────
+class _BlockLabel extends StatelessWidget {
+  final String label;
+  const _BlockLabel({required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      label.toUpperCase(),
+      style: AppTheme.caption.copyWith(
+        color: AppTheme.primary,
+        fontWeight: FontWeight.w700,
+        letterSpacing: 1.2,
+        fontSize: 10,
+      ),
+    );
+  }
+}
+
+class _InfoLine extends StatelessWidget {
+  final String text;
+  const _InfoLine({required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 2),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 5),
+            child: Container(
+              width: 4,
+              height: 4,
+              decoration: BoxDecoration(
+                color: AppTheme.mediumGrey,
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+          const SizedBox(width: 7),
+          Expanded(
+            child: Text(
+              text,
+              style: AppTheme.bodySmall.copyWith(height: 1.55),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ThinDivider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 1,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [AppTheme.primary.withValues(alpha: 0.4), Colors.transparent],
         ),
       ),
     );
