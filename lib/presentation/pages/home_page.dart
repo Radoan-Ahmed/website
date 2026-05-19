@@ -14,6 +14,7 @@ import 'package:website/presentation/widgets/news/news_section.dart';
 import 'package:website/presentation/widgets/services/services_section.dart';
 import 'package:website/presentation/widgets/stats/stats_section.dart';
 import 'package:website/presentation/widgets/testimonials/testimonials_section.dart';
+import 'package:website/presentation/widgets/training/training_section.dart';
 import '../../../core/theme/app_theme.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     '#about': GlobalKey(),
     '#contact': GlobalKey(),
     '#blog': GlobalKey(),
+    '#training': GlobalKey(),
   };
 
   bool _showBackToTop = false;
@@ -133,6 +135,15 @@ class _HomePageState extends State<HomePage> {
 
                 // ── STATS ─────────────────────────────────
                 // StatsSection(stats: state.stats),
+
+                // ── TRAINING ──────────────────────────────
+                SizedBox(
+                  key: _sectionKeys['#training'],
+                  child: TrainingSection(
+                    onViewAllTap: () =>
+                        Navigator.of(context).pushNamed('/training'),
+                  ),
+                ),
 
                 // ── DOCTORS ───────────────────────────────
                 SizedBox(

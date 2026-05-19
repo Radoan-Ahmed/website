@@ -163,6 +163,19 @@ class _NavBarState extends State<NavBar> {
   }
 
   void _scrollTo(String url) {
+    if (url == '#training') {
+      final key = widget.sectionKeys[url];
+      if (key?.currentContext != null) {
+        Scrollable.ensureVisible(
+          key!.currentContext!,
+          duration: const Duration(milliseconds: 600),
+          curve: Curves.easeInOut,
+        );
+      } else {
+        Navigator.of(context).pushNamed('/training');
+      }
+      return;
+    }
     final key = widget.sectionKeys[url];
     if (key?.currentContext != null) {
       Scrollable.ensureVisible(

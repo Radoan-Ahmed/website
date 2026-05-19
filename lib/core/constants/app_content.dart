@@ -21,7 +21,9 @@ class AppContent {
     {'label': 'Home', 'url': '#home'},
     {'label': 'Our Services', 'url': '#services'},
     {'label': 'Doctors', 'url': '#doctors'},
-    {'label': 'Services', 'url': '#services'},
+    {'label': 'Training', 'url': '#training'},
+    {'label': 'Product', 'url': '#product'},
+    {'label': 'Video & Photo Galary', 'url': '#product'},
     {'label': 'Branches', 'url': '#branches'},
     {
       'label': 'About Us',
@@ -471,6 +473,84 @@ Take control of your health today. Book your consultation and get expert guidanc
       'category': 'Medicine',
       'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_3.webp',
       'url': '#blog',
+    },
+  ];
+
+  // ─── TRAINING ─────────────────────────────────────────────
+  static const String trainingSectionTitle = 'Professional Training Programs';
+  static const String trainingSectionSubtitle =
+      'Advance your career with our certified training courses in integrative and natural medicine.';
+
+  static const List<Map<String, dynamic>> trainings = [
+    {
+      'icon': 'acupuncture',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_1.webp',
+      'title': 'Acupuncture Training',
+      'duration': '6 Months',
+      'level': 'Beginner – Advanced',
+      'seats': 'Limited Seats',
+      'description':
+          'A comprehensive hands-on training program covering traditional acupuncture theory, meridian systems, needle techniques, and clinical applications. Participants will gain the knowledge and practical skills to safely perform acupuncture therapy.',
+      'highlights': [
+        'Meridian & acupoint theory',
+        'Needle insertion techniques',
+        'Pain management protocols',
+        'Clinical case studies',
+        'Certificate upon completion',
+      ],
+    },
+    {
+      'icon': 'cupping',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/11/s_2.webp',
+      'title': 'Hijama / Cupping Therapy Training',
+      'duration': '6 Month',
+      'level': 'All Levels',
+      'seats': 'Limited Seats',
+      'description':
+          'Learn the ancient art of Hijama (wet cupping) and dry cupping therapy in a safe, hygienic, and professional setting. This course covers the historical roots, therapeutic benefits, safety protocols, and step-by-step clinical procedures.',
+      'highlights': [
+        'History & Islamic perspective of Hijama',
+        'Dry & wet cupping techniques',
+        'Hygiene & sterilisation standards',
+        'Point selection for common conditions',
+        'Hands-on practical sessions',
+        'Certificate upon completion',
+      ],
+    },
+    {
+      'icon': 'natural',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_4.webp',
+      'title': 'Natural & Functional Medicine',
+      'duration': '6 Months',
+      'level': 'Intermediate',
+      'seats': 'Limited Seats',
+      'description':
+          'Explore the principles of functional and integrative medicine, including nutrition therapy, herbal remedies, detoxification, and lifestyle modification strategies. Designed for healthcare practitioners seeking a holistic approach.',
+      'highlights': [
+        'Functional medicine fundamentals',
+        'Nutritional & herbal therapy',
+        'Gut health & detox protocols',
+        'Patient assessment tools',
+        'Evidence-based approach',
+        'Certificate upon completion',
+      ],
+    },
+    {
+      'icon': 'bio',
+      'image': 'https://awcbd.org/wp-content/uploads/2024/12/s_3.webp',
+      'title': 'Bio-Purification Therapy Training',
+      'duration': '6 Months',
+      'level': 'Beginner',
+      'seats': 'Limited Seats',
+      'description':
+          'Master the methods of bio-purification and detoxification therapy. This training covers holistic detox principles, therapeutic protocols, and practical techniques used to cleanse and restore the body naturally.',
+      'highlights': [
+        'Detox pathways & physiology',
+        'Therapeutic techniques',
+        'Diet & lifestyle guidance',
+        'Practical demonstrations',
+        'Certificate upon completion',
+      ],
     },
   ];
 

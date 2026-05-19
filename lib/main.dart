@@ -5,6 +5,7 @@ import 'core/theme/app_theme.dart';
 import 'data/repositories/app_repository.dart';
 import 'presentation/cubits/home_cubit.dart';
 import 'presentation/pages/home_page.dart';
+import 'presentation/pages/training_page.dart';
 
 void main() {
   runApp(const AWCApp());
@@ -38,7 +39,11 @@ class AWCApp extends StatelessWidget {
           title: 'Acu Life Health Care',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.theme,
-          home: const HomePage(),
+          initialRoute: '/',
+          routes: {
+            '/': (_) => const HomePage(),
+            '/training': (_) => const TrainingPage(),
+          },
           scrollBehavior: const _WebScrollBehavior(),
         ),
       ),
