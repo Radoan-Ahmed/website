@@ -22,7 +22,7 @@ class AppContent {
     {'label': 'Our Services', 'url': '#services'},
     {'label': 'Doctors', 'url': '#doctors'},
     {'label': 'Training', 'url': '#training'},
-    {'label': 'Product', 'url': '#product'},
+    {'label': 'Opening Hours', 'url': '#hourseSection'},
     {'label': 'Video & Photo Galary', 'url': '#product'},
     {'label': 'View Map', 'url': '#branches'},  // scrolls to map section or navigates to /location
     {
@@ -367,13 +367,13 @@ Take control of your health today. Book your consultation and get expert guidanc
   static const String hoursDescription =
       'Our friendly receptionist is ready to assist you during our working hours.';
   static const List<Map<String, String>> clinicHours = [
-    {'day': 'Sunday', 'hours': '04:00 pm - 10:00 pm'},
-    {'day': 'Monday', 'hours': '04:00 pm - 10:00 pm'},
-    {'day': 'Tuesday', 'hours': '04:00 pm - 10:00 pm'},
-    {'day': 'Wednesday', 'hours': '04:00 pm - 10:00 pm'},
-    {'day': 'Thursday', 'hours': '04:00 pm - 10:00 pm'},
-    {'day': 'Friday', 'hours': '04:00 pm - 10:00 pm'},
-    {'day': 'Saturday', 'hours': '04:00 pm - 10:00 pm'},
+    {'day': 'Sunday', 'hours': '02:00 pm - 10:00 pm'},
+    {'day': 'Monday', 'hours': '02:00 pm - 10:00 pm'},
+    {'day': 'Tuesday', 'hours': '02:00 pm - 10:00 pm'},
+    {'day': 'Wednesday', 'hours': '02:00 pm - 10:00 pm'},
+    {'day': 'Thursday', 'hours': '02:00 pm - 10:00 pm'},
+    {'day': 'Friday', 'hours': '02:00 pm - 10:00 pm'},
+    {'day': 'Saturday', 'hours': '02:00 pm - 10:00 pm'},
   ];
   static const String hoursImage =
       'https://awcbd.org/wp-content/uploads/2024/11/AWC-Website-Banner-04.webp';

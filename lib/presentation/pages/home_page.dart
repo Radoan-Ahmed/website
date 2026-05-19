@@ -39,6 +39,7 @@ class _HomePageState extends State<HomePage> {
     '#blog': GlobalKey(),
     '#training': GlobalKey(),
     '#branches': GlobalKey(),
+    '#hourseSection': GlobalKey(),
   };
 
   bool _showBackToTop = false;
@@ -127,7 +128,10 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 // ── HOURS + IMAGE ─────────────────────────
-                const HoursSection(),
+                SizedBox(
+                  key: _sectionKeys['#hourseSection'],
+                  child: const HoursSection(),
+                ),
 
                 // ── APPOINTMENT ───────────────────────────
                 SizedBox(
@@ -142,8 +146,8 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   key: _sectionKeys['#training'],
                   child: TrainingSection(
-                    onViewAllTap: () =>
-                        Navigator.of(context).pushNamed('/training'),
+                    onViewAllTap:
+                        () => Navigator.of(context).pushNamed('/training'),
                   ),
                 ),
 
@@ -157,8 +161,8 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   key: _sectionKeys['#branches'],
                   child: MapSection(
-                    onViewFullMapTap: () =>
-                        Navigator.of(context).pushNamed('/location'),
+                    onViewFullMapTap:
+                        () => Navigator.of(context).pushNamed('/location'),
                   ),
                 ),
 
