@@ -83,14 +83,15 @@ class _DoctorCardState extends State<_DoctorCard> {
               borderRadius: const BorderRadius.vertical(
                   top: Radius.circular(12)),
               child: Container(
-                height: 180,
+                height: 300,
                 width: double.infinity,
                 color: AppTheme.accent,
                 child: Stack(
                   fit: StackFit.expand,
                   children: [
                     Image.asset(
-                      'assets/images/doctor_image.jpeg',
+                      // 'assets/images/doctor_image.jpeg',
+                      widget.doctor.image,
                       fit: BoxFit.fill,
                     ),
                     if (_hovered)

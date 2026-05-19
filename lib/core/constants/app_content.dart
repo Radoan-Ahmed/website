@@ -46,7 +46,7 @@ class AppContent {
     },
     {
       'title': 'Integrative Health & Research',
-      'subtitle': 'Modern Medicine meets Natural Functional Healing',
+      'subtitle': 'Natural Healing Better Living',
       'buttonText': 'BOOK APPOINTMENT',
       'buttonUrl': '#appointment',
       'image':
@@ -400,7 +400,19 @@ Take control of your health today. Book your consultation and get expert guidanc
     {
       'name': 'Dr. Shurab Hossain',
       'qualification': 'PhD(F),Mphil,FCPA(India)MPH(NHFR&I),BAMS(DU)',
-      'image': 'https://awcbd.org/wp-content/uploads/2024/11/favicon.png',
+      'image': 'assets/images/doctor_image.jpeg',
+      'url': '#doctors',
+    },
+    {
+      'name': 'Dr. Rakibul Hasan',
+      'qualification': 'BUMS (DU)',
+      'image': 'assets/images/rakib_doctor_image.jpeg',
+      'url': '#doctors',
+    },
+    {
+      'name': 'Dr. Nazrin Sultana',
+      'qualification': 'BUMS (DU), CMU, MS (Microbiology)',
+      'image': 'assets/images/female_doctor_image.jpg',
       'url': '#doctors',
     }
   ];
