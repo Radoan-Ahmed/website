@@ -38,8 +38,7 @@ class _NavBarState extends State<NavBar> {
           // Top bar
           Container(
             color: AppTheme.primary,
-            padding:
-                const EdgeInsets.symmetric(horizontal: 32, vertical: 6),
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 6),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -71,36 +70,22 @@ class _NavBarState extends State<NavBar> {
           // Main nav
           Container(
             color: AppTheme.white,
-            padding:
-                const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
             child: Row(
               children: [
                 // Logo
-                Image.network(
-                  AppContent.logoUrl,
+                Image.asset(
+                  'assets/images/app_logo.jpeg',
                   height: 55,
-                  errorBuilder: (_, __, ___) => Row(
-                    children: [
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: AppTheme.primary,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(Icons.local_hospital,
-                            color: Colors.white, size: 22),
-                      ),
-                      const SizedBox(width: 8),
-                      Text(
-                        'AcuLife Healthcare & Research',
-                        style: GoogleFonts.playfairDisplay(
-                          fontSize: 22,
-                          fontWeight: FontWeight.w700,
-                          color: AppTheme.primary,
-                        ),
-                      ),
-                    ],
+                  fit: BoxFit.contain,
+                ),
+                const SizedBox(width: 12),
+                Text(
+                  'AcuLife Healthcare & Research',
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                    color: AppTheme.primary,
                   ),
                 ),
                 const Spacer(),
@@ -109,8 +94,7 @@ class _NavBarState extends State<NavBar> {
                     children: [
                       ..._buildNavItems(),
                       const SizedBox(width: 20),
-                      _AppointmentButton(
-                          onTap: widget.onAppointmentTap),
+                      _AppointmentButton(onTap: widget.onAppointmentTap),
                     ],
                   )
                 else
@@ -123,15 +107,18 @@ class _NavBarState extends State<NavBar> {
                           _mobileMenuOpen ? Icons.close : Icons.menu,
                           color: AppTheme.dark,
                         ),
-                        onPressed: () => setState(
-                            () => _mobileMenuOpen = !_mobileMenuOpen),
+                        onPressed:
+                            () => setState(
+                              () => _mobileMenuOpen = !_mobileMenuOpen,
+                            ),
                       ),
                     ],
                   ),
               ],
             ),
           ),
-          if (isMobile && _mobileMenuOpen) _MobileMenu(sectionKeys: widget.sectionKeys),
+          if (isMobile && _mobileMenuOpen)
+            _MobileMenu(sectionKeys: widget.sectionKeys),
         ],
       ),
     );
@@ -162,10 +149,7 @@ class _NavBarState extends State<NavBar> {
 
   void _scrollTo(String url) {
     // Pages that have dedicated routes — fall back to route if section not mounted
-    const routeMap = {
-      '#training': '/training',
-      '#branches': '/location',
-    };
+    const routeMap = {'#training': '/training', '#branches': '/location'};
 
     if (routeMap.containsKey(url)) {
       final key = widget.sectionKeys[url];
@@ -274,9 +258,11 @@ class _DropdownNavItemState extends State<_DropdownNavItem> {
                     ),
                   ),
                   const SizedBox(width: 4),
-                  Icon(Icons.keyboard_arrow_down,
-                      size: 16,
-                      color: _hovered ? AppTheme.primary : AppTheme.darkGrey),
+                  Icon(
+                    Icons.keyboard_arrow_down,
+                    size: 16,
+                    color: _hovered ? AppTheme.primary : AppTheme.darkGrey,
+                  ),
                 ],
               ),
             ),
@@ -295,10 +281,12 @@ class _DropdownNavItemState extends State<_DropdownNavItem> {
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: (widget.link['children']
-                            as List<Map<String, String>>)
-                        .map((child) => _DropdownItem(label: child['label']!))
-                        .toList(),
+                    children:
+                        (widget.link['children'] as List<Map<String, String>>)
+                            .map(
+                              (child) => _DropdownItem(label: child['label']!),
+                            )
+                            .toList(),
                   ),
                 ),
               ),
@@ -354,8 +342,7 @@ class _AppointmentButtonState extends State<_AppointmentButton> {
         onTap: widget.onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          padding:
-              const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
           decoration: BoxDecoration(
             color: _hovered ? AppTheme.primaryDark : AppTheme.primary,
             borderRadius: BorderRadius.circular(6),
@@ -378,13 +365,14 @@ class _MobileMenu extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: AppContent.navLinks.map((link) {
-          return ListTile(
-            dense: true,
-            title: Text(link['label']!, style: AppTheme.navLabel),
-            onTap: () {},
-          );
-        }).toList(),
+        children:
+            AppContent.navLinks.map((link) {
+              return ListTile(
+                dense: true,
+                title: Text(link['label']!, style: AppTheme.navLabel),
+                onTap: () {},
+              );
+            }).toList(),
       ),
     );
   }
