@@ -5,6 +5,7 @@ import 'core/theme/app_theme.dart';
 import 'data/repositories/app_repository.dart';
 import 'presentation/cubits/home_cubit.dart';
 import 'presentation/pages/home_page.dart';
+import 'presentation/pages/map_page.dart';
 import 'presentation/pages/training_page.dart';
 
 void main() {
@@ -43,6 +44,7 @@ class AWCApp extends StatelessWidget {
           routes: {
             '/': (_) => const HomePage(),
             '/training': (_) => const TrainingPage(),
+            '/location': (_) => const MapPage(),
           },
           scrollBehavior: const _WebScrollBehavior(),
         ),

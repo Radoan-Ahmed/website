@@ -14,6 +14,7 @@ import 'package:website/presentation/widgets/news/news_section.dart';
 import 'package:website/presentation/widgets/services/services_section.dart';
 import 'package:website/presentation/widgets/stats/stats_section.dart';
 import 'package:website/presentation/widgets/testimonials/testimonials_section.dart';
+import 'package:website/presentation/widgets/map/map_section.dart';
 import 'package:website/presentation/widgets/training/training_section.dart';
 import '../../../core/theme/app_theme.dart';
 
@@ -37,6 +38,7 @@ class _HomePageState extends State<HomePage> {
     '#contact': GlobalKey(),
     '#blog': GlobalKey(),
     '#training': GlobalKey(),
+    '#branches': GlobalKey(),
   };
 
   bool _showBackToTop = false;
@@ -149,6 +151,15 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   key: _sectionKeys['#doctors'],
                   child: DoctorsSection(doctors: state.doctors),
+                ),
+
+                // ── MAP / BRANCHES ────────────────────────
+                SizedBox(
+                  key: _sectionKeys['#branches'],
+                  child: MapSection(
+                    onViewFullMapTap: () =>
+                        Navigator.of(context).pushNamed('/location'),
+                  ),
                 ),
 
                 // ── TESTIMONIALS ──────────────────────────

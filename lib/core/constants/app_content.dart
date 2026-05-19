@@ -24,7 +24,7 @@ class AppContent {
     {'label': 'Training', 'url': '#training'},
     {'label': 'Product', 'url': '#product'},
     {'label': 'Video & Photo Galary', 'url': '#product'},
-    {'label': 'Branches', 'url': '#branches'},
+    {'label': 'View Map', 'url': '#branches'},  // scrolls to map section or navigates to /location
     {
       'label': 'About Us',
       'url': '#about',
@@ -475,6 +475,30 @@ Take control of your health today. Book your consultation and get expert guidanc
       'url': '#blog',
     },
   ];
+
+  // ─── LOCATION / MAP ───────────────────────────────────────
+  // ✏ Change lat/lng here to update the embedded map instantly.
+  // Tip: open Google Maps, right-click your location → "What's here?" to copy coordinates.
+
+  static const Map<String, dynamic> branch1Location = {
+    'name': 'Mirpur-10 Branch',
+    'address': 'Save On Health Care, Mirpur-10\nOpposite Mirpur Girls Ideal High School, Dhaka',
+    'phone': '01568099036',
+    'email': '',
+    'lat': 23.8057,   // ← change latitude here
+    'lng': 90.3707,   // ← change longitude here
+    'zoom': 17,       // ← 1 (world) – 20 (building). 16-18 is ideal for a clinic
+  };
+
+  static const Map<String, dynamic> branch2Location = {
+    'name': 'Bashundhara Branch',
+    'address': 'Bashundhara Main Gate\nSouth Side of Jamuna Future Park, Dhaka',
+    'phone': '09639-670670',
+    'email': 'awc.health@gmail.com',
+    'lat': 23.8130,   // ← change latitude here
+    'lng': 90.4202,   // ← change longitude here
+    'zoom': 17,
+  };
 
   // ─── TRAINING ─────────────────────────────────────────────
   static const String trainingSectionTitle = 'Professional Training Programs';

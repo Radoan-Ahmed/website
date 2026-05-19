@@ -138,9 +138,7 @@ class _NavBarState extends State<NavBar> {
   }
 
   List<Widget> _buildNavItems() {
-    return AppContent.navLinks
-        .where((link) => link['label'] != 'Branches')
-        .map((link) {
+    return AppContent.navLinks.map((link) {
       // Remove dropdown for 'About Us' and treat as regular nav item
       if (link['label'] == 'About Us') {
         return _NavItem(
@@ -163,7 +161,13 @@ class _NavBarState extends State<NavBar> {
   }
 
   void _scrollTo(String url) {
-    if (url == '#training') {
+    // Pages that have dedicated routes — fall back to route if section not mounted
+    const routeMap = {
+      '#training': '/training',
+      '#branches': '/location',
+    };
+
+    if (routeMap.containsKey(url)) {
       final key = widget.sectionKeys[url];
       if (key?.currentContext != null) {
         Scrollable.ensureVisible(
@@ -172,10 +176,11 @@ class _NavBarState extends State<NavBar> {
           curve: Curves.easeInOut,
         );
       } else {
-        Navigator.of(context).pushNamed('/training');
+        Navigator.of(context).pushNamed(routeMap[url]!);
       }
       return;
     }
+
     final key = widget.sectionKeys[url];
     if (key?.currentContext != null) {
       Scrollable.ensureVisible(
