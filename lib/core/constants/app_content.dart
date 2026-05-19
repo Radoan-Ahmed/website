@@ -89,20 +89,57 @@ class AppContent {
 
   // ─── ABOUT SECTION ────────────────────────────────────────
   static const String aboutTitle =
-      "We're Setting the New Standards in Medical Research & Clinical Care";
+      'A Deeper, More Intentional Approach to Healthcare';
   static const String aboutBody =
-      "We search the root cause of illness with a comprehensive full-body physical exam and analyze lab results and reports. Then, We advise an integrative approach with modern allopathic medicine as well as evidence-based natural functional medicine to recover the malfunctioning of the body organs with an integrated approach. We also guide individualized diet and lifestyle modification to regain perfect health.";
-  static const String aboutSubtitle = 'ClinMedix Special Features';
-  static const List<String> aboutFeatures = [
-    'Patient Experience',
-    'Infection Prevention',
-    'Quality of Care Services',
-    'High-Risk Procedures',
-    'Better Safety Measures',
-    'Standards of Treatment',
-  ];
+      'In a world that often prioritizes quick fixes over lasting wellness, we invite you to experience a deeper, more intentional approach to healthcare. Our practice merges the wisdom of ancient traditions with a compassionate, modern understanding of the human body. Whether you are seeking relief from chronic pain, navigating a health challenge, or simply looking to optimize your energy, we provide a sanctuary for your recovery and growth.';
   static const String aboutImage =
       'https://awcbd.org/wp-content/uploads/2024/12/AWC-Website-Banner-03.webp';
+
+  static const String visionTitle = 'Our Vision';
+  static const String visionBody =
+      'To be the global benchmark for integrative medicine, where ancient healing wisdom and modern scientific research converge to create a healthier, more balanced world. We envision a future where Acupuncture, Ayurveda, Cupping and Bio-Purification therapies are not merely "alternatives," but essential, evidence-based components of standard healthcare — accessible to all and respected by the global medical community.';
+
+  static const String missionTitle = 'Mission Statement';
+  static const String missionBody =
+      'We search the root cause of illness and provide evidence-based integrative treatments designed to restore the body\'s natural rhythm and achieve long-term vitality. We achieve this through four core commitments:';
+  static const List<Map<String, String>> missionCommitments = [
+    {
+      'icon': 'clinical',
+      'title': 'Clinical Excellence',
+      'description':
+          'Delivering the highest standard of patient care through rigorous diagnostic protocols and personalized treatment plans.',
+    },
+    {
+      'icon': 'scientific',
+      'title': 'Scientific Rigor',
+      'description':
+          'Every therapy we offer is grounded in peer-reviewed evidence, ensuring safe and effective outcomes for our patients.',
+    },
+    {
+      'icon': 'empathetic',
+      'title': 'Empathetic Innovation',
+      'description':
+          'We continuously evolve our methods while keeping the patient\'s comfort, dignity, and well-being at the center of all we do.',
+    },
+    {
+      'icon': 'educational',
+      'title': 'Educational Leadership',
+      'description':
+          'Training and empowering the next generation of integrative health practitioners across Bangladesh and beyond.',
+    },
+  ];
+
+  static const String advantageTitle =
+      "Advantage of AcuLife Healthcare & Research";
+  static const String advantageQuote =
+      '"Beyond the needle, we find the solution. Experience the science of natural medicine at AcuLife Healthcare & Research — Dhaka\'s premier destination for integrative healing."';
+  static const List<String> advantages = [
+    "We don't just treat the pain — we listen to your body's internal signals.",
+    'Modern Science, Traditional Wisdom — the best of both worlds.',
+    'The "Pain-Free & Drug-Free" solution for lasting recovery.',
+    'Relief without the side effects of medication.',
+    'Every treatment plan is as unique as your pulse.',
+  ];
 
   // ─── SERVICES ─────────────────────────────────────────────
   static const String servicesSectionTitle = 'Premium Medical Services';
