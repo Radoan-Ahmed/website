@@ -101,13 +101,13 @@ class _DoctorCardState extends State<_DoctorCard> {
                   const BorderRadius.vertical(top: Radius.circular(16)),
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
                     height: 270,
                     width: double.infinity,
+                    color: AppTheme.accent,
                     child: Image.asset(
                       doc.image,
-                      fit: BoxFit.cover,
-                      alignment: Alignment.topCenter,
+                      fit: BoxFit.contain,
                       errorBuilder: (_, __, ___) => Container(
                         color: AppTheme.accent,
                         child: Icon(
