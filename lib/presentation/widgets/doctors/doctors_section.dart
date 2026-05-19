@@ -35,7 +35,7 @@ class DoctorsSection extends StatelessWidget {
               crossAxisCount: crossAxisCount,
               crossAxisSpacing: 24,
               mainAxisSpacing: 24,
-              mainAxisExtent: 620,
+              mainAxisExtent: 700,
             ),
             itemCount: doctors.length,
             itemBuilder: (ctx, i) => _DoctorCard(doctor: doctors[i]),

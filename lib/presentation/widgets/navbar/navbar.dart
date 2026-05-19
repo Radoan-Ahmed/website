@@ -42,12 +42,15 @@ class _NavBarState extends State<NavBar> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  AppContent.clinicTagline,
-                  style: GoogleFonts.lato(
-                    fontSize: 12,
-                    color: Colors.white70,
-                    fontStyle: FontStyle.italic,
+                Flexible(
+                  child: Text(
+                    AppContent.clinicTagline,
+                    style: GoogleFonts.lato(
+                      fontSize: 12,
+                      color: Colors.white70,
+                      fontStyle: FontStyle.italic,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 Row(
@@ -74,18 +77,24 @@ class _NavBarState extends State<NavBar> {
             child: Row(
               children: [
                 // Logo
-                Image.asset(
-                  'assets/images/app_logo.jpeg',
-                  height: 55,
-                  fit: BoxFit.contain,
+                ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 120),
+                  child: Image.asset(
+                    'assets/images/app_logo.jpeg',
+                    height: 55,
+                    fit: BoxFit.contain,
+                  ),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  'AcuLife Healthcare & Research',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w700,
-                    color: AppTheme.primary,
+                Flexible(
+                  child: Text(
+                    'AcuLife Healthcare & Research',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: isMobile ? 16 : 22,
+                      fontWeight: FontWeight.w700,
+                      color: AppTheme.primary,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const Spacer(),

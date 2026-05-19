@@ -35,7 +35,7 @@ class ServicesSection extends StatelessWidget {
               crossAxisCount: crossAxisCount,
               crossAxisSpacing: 24,
               mainAxisSpacing: 24,
-              childAspectRatio: 0.85,
+              mainAxisExtent: 400,
             ),
             itemCount: services.length,
             itemBuilder: (ctx, i) => _ServiceCard(service: services[i]),
@@ -69,7 +69,7 @@ class _ServiceCardState extends State<_ServiceCard> {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(_hovered ? 0.12 : 0.06),
+              color: Colors.black.withValues(alpha: _hovered ? 0.12 : 0.06),
               blurRadius: _hovered ? 30 : 15,
               offset: Offset(0, _hovered ? 12 : 5),
             ),
