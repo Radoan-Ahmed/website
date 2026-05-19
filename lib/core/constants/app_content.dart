@@ -23,7 +23,6 @@ class AppContent {
     {'label': 'Doctors', 'url': '#doctors'},
     {'label': 'Training', 'url': '#training'},
     {'label': 'Opening Hours', 'url': '#hourseSection'},
-    {'label': 'Video & Photo Galary', 'url': '#product'},
     {
       'label': 'View Map',
       'url': '#branches',
