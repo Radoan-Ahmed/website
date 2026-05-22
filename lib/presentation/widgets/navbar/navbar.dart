@@ -112,34 +112,63 @@ class _NavBarState extends State<NavBar> {
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
             child: Row(
               children: [
-                // Logo
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 120),
-                  child: Image.asset(
-                    'assets/images/app_logo.jpeg',
-                    height: 55,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                const SizedBox(width: 12),
+                // Logo + clinic name (tappable → home)
                 if (isMobile)
                   Expanded(
-                    child: Text(
-                      'AcuLife Healthcare & Research',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w700,
-                        color: AppTheme.primary,
+                    child: GestureDetector(
+                      onTap: () => _scrollTo('#home'),
+                      child: Row(
+                        children: [
+                          ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 120),
+                            child: Image.asset(
+                              'assets/images/app_logo.jpeg',
+                              height: 55,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              'AcuLife Healthcare & Research',
+                              style: GoogleFonts.playfairDisplay(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: AppTheme.primary,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   )
                 else
-                  Text(
-                    'AcuLife Healthcare & Research',
-                    style: GoogleFonts.playfairDisplay(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: AppTheme.primary,
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () => _scrollTo('#home'),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 120),
+                            child: Image.asset(
+                              'assets/images/app_logo.jpeg',
+                              height: 55,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Text(
+                            'AcuLife Healthcare & Research',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: AppTheme.primary,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 if (!isMobile) const Spacer(),
@@ -195,6 +224,7 @@ class _NavBarState extends State<NavBar> {
       );
     }).toList();
   }
+
 
   void _scrollTo(String url) {
     // Pages that have dedicated routes — fall back to route if section not mounted
