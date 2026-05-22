@@ -271,11 +271,11 @@ class _HeroSlide extends StatelessWidget {
                       spacing: 12,
                       runSpacing: 12,
                       children: [
-                        _HeroButton(
-                          label: slide['buttonText']!,
-                          onTap: onServicesTap,
-                          filled: true,
-                        ),
+                        // _HeroButton(
+                        //   label: slide['buttonText']!,
+                        //   onTap: onServicesTap,
+                        //   filled: true,
+                        // ),
                         _HeroButton(
                           label: 'Book Appointment',
                           onTap: onAppointmentTap,
