@@ -40,7 +40,13 @@ class _NavBarState extends State<NavBar> {
           child: Material(
             elevation: 4,
             color: AppTheme.white,
-            child: _MobileMenu(sectionKeys: widget.sectionKeys),
+            child: _MobileMenu(
+            sectionKeys: widget.sectionKeys,
+            onItemTap: (url) {
+              _toggleMobileMenu();
+              _scrollTo(url);
+            },
+          ),
           ),
         ),
       );
@@ -131,7 +137,7 @@ class _NavBarState extends State<NavBar> {
                   Text(
                     'AcuLife Healthcare & Research',
                     style: GoogleFonts.playfairDisplay(
-                      fontSize: 17,
+                      fontSize: 18,
                       fontWeight: FontWeight.w700,
                       color: AppTheme.primary,
                     ),
@@ -399,7 +405,12 @@ class _AppointmentButtonState extends State<_AppointmentButton> {
 
 class _MobileMenu extends StatelessWidget {
   final Map<String, GlobalKey> sectionKeys;
-  const _MobileMenu({required this.sectionKeys});
+  final void Function(String url) onItemTap;
+
+  const _MobileMenu({
+    required this.sectionKeys,
+    required this.onItemTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -408,14 +419,13 @@ class _MobileMenu extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:
-            AppContent.navLinks.map((link) {
-              return ListTile(
-                dense: true,
-                title: Text(link['label']!, style: AppTheme.navLabel),
-                onTap: () {},
-              );
-            }).toList(),
+        children: AppContent.navLinks.map((link) {
+          return ListTile(
+            dense: true,
+            title: Text(link['label']!, style: AppTheme.navLabel),
+            onTap: () => onItemTap(link['url']!),
+          );
+        }).toList(),
       ),
     );
   }
