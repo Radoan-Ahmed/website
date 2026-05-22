@@ -184,7 +184,7 @@ class _MissionBlock extends StatelessWidget {
               crossAxisCount: crossAxisCount,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20,
-              childAspectRatio: isMobile ? 3.2 : 0.88,
+              mainAxisExtent: isMobile ? 160 : 290,
             ),
             itemCount: AppContent.missionCommitments.length,
             itemBuilder: (ctx, i) {

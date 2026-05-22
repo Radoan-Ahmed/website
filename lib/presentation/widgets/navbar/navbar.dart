@@ -23,6 +23,36 @@ class NavBar extends StatefulWidget implements PreferredSizeWidget {
 class _NavBarState extends State<NavBar> {
   bool _isScrolled = false;
   bool _mobileMenuOpen = false;
+  OverlayEntry? _menuOverlay;
+
+  void _toggleMobileMenu() {
+    if (_mobileMenuOpen) {
+      _menuOverlay?.remove();
+      _menuOverlay = null;
+      setState(() => _mobileMenuOpen = false);
+    } else {
+      setState(() => _mobileMenuOpen = true);
+      _menuOverlay = OverlayEntry(
+        builder: (_) => Positioned(
+          top: widget.preferredSize.height,
+          left: 0,
+          right: 0,
+          child: Material(
+            elevation: 4,
+            color: AppTheme.white,
+            child: _MobileMenu(sectionKeys: widget.sectionKeys),
+          ),
+        ),
+      );
+      Overlay.of(context).insert(_menuOverlay!);
+    }
+  }
+
+  @override
+  void dispose() {
+    _menuOverlay?.remove();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,14 +117,17 @@ class _NavBarState extends State<NavBar> {
                 ),
                 const SizedBox(width: 12),
                 Flexible(
-                  child: Text(
-                    'AcuLife Healthcare & Research',
-                    style: GoogleFonts.playfairDisplay(
-                      fontSize: isMobile ? 16 : 22,
-                      fontWeight: FontWeight.w700,
-                      color: AppTheme.primary,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'AcuLife Healthcare & Research',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isMobile ? 16 : 22,
+                        fontWeight: FontWeight.w700,
+                        color: AppTheme.primary,
+                      ),
                     ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const Spacer(),
@@ -116,18 +149,13 @@ class _NavBarState extends State<NavBar> {
                           _mobileMenuOpen ? Icons.close : Icons.menu,
                           color: AppTheme.dark,
                         ),
-                        onPressed:
-                            () => setState(
-                              () => _mobileMenuOpen = !_mobileMenuOpen,
-                            ),
+                        onPressed: _toggleMobileMenu,
                       ),
                     ],
                   ),
               ],
             ),
           ),
-          if (isMobile && _mobileMenuOpen)
-            _MobileMenu(sectionKeys: widget.sectionKeys),
         ],
       ),
     );

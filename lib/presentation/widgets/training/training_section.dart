@@ -34,7 +34,7 @@ class TrainingSection extends StatelessWidget {
               crossAxisCount: crossAxisCount,
               crossAxisSpacing: 24,
               mainAxisSpacing: 24,
-              childAspectRatio: isMobile ? 1.1 : 0.72,
+              mainAxisExtent: isMobile ? 480 : 460,
             ),
             itemCount: AppContent.trainings.length,
             itemBuilder: (ctx, i) =>
@@ -110,7 +110,7 @@ class _TrainingCardState extends State<_TrainingCard> {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+                padding: const EdgeInsets.fromLTRB(18, 12, 18, 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
