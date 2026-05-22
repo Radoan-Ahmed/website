@@ -116,34 +116,40 @@ class _NavBarState extends State<NavBar> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Flexible(
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: Alignment.centerLeft,
+                if (isMobile)
+                  Expanded(
                     child: Text(
                       'AcuLife Healthcare & Research',
                       style: GoogleFonts.playfairDisplay(
-                        fontSize: isMobile ? 16 : 22,
+                        fontSize: 15,
                         fontWeight: FontWeight.w700,
                         color: AppTheme.primary,
                       ),
                     ),
+                  )
+                else
+                  Text(
+                    'AcuLife Healthcare & Research',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                      color: AppTheme.primary,
+                    ),
                   ),
-                ),
-                const Spacer(),
+                if (!isMobile) const Spacer(),
                 if (!isMobile)
                   Row(
                     children: [
                       ..._buildNavItems(),
-                      const SizedBox(width: 20),
-                      _AppointmentButton(onTap: widget.onAppointmentTap),
+                      // const SizedBox(width: 20),
+                      // _AppointmentButton(onTap: widget.onAppointmentTap),
                     ],
                   )
                 else
                   Row(
                     children: [
-                      _AppointmentButton(onTap: widget.onAppointmentTap),
-                      const SizedBox(width: 12),
+                      // _AppointmentButton(onTap: widget.onAppointmentTap),
+                      // const SizedBox(width: 12),
                       IconButton(
                         icon: Icon(
                           _mobileMenuOpen ? Icons.close : Icons.menu,
