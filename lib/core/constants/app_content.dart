@@ -18,15 +18,7 @@ class AppContent {
 
   // ─── NAV LINKS ────────────────────────────────────────────
   static const List<Map<String, dynamic>> navLinks = [
-    {'label': 'Home', 'url': '#home'},
-    {'label': 'Our Services', 'url': '#services'},
-    {'label': 'Doctors', 'url': '#doctors'},
-    {'label': 'Training', 'url': '#training'},
-    {'label': 'Opening Hours', 'url': '#hourseSection'},
-    {
-      'label': 'View Map',
-      'url': '#branches',
-    }, // scrolls to map section or navigates to /location
+    // {'label': 'Home', 'url': '#home'},
     {
       'label': 'About Us',
       'url': '#about',
@@ -35,7 +27,18 @@ class AppContent {
         {'label': 'Blog', 'url': '#blog'},
       ],
     },
-    {'label': 'Contact Us', 'url': '#contact'},
+    {'label': 'Our Services', 'url': '#services'},
+    // {'label': 'Opening Hours', 'url': '#hourseSection'},
+    {'label': 'Education', 'url': '#training'},
+    {'label': 'Doctors', 'url': '#doctors'},
+    {'label': 'Gallery', 'url': '#'},
+    {'label': 'News', 'url': '#'},
+    // {
+    //   'label': 'View Map',
+    //   'url': '#branches',
+    // }, // scrolls to map section or navigates to /location
+    
+    // {'label': 'Contact Us', 'url': '#contact'},
   ];
 
   // ─── HERO SLIDES ─────────────────────────────────────────
