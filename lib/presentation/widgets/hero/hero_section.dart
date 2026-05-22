@@ -42,20 +42,20 @@ class _HeroSectionState extends State<HeroSection>
         .animate(CurvedAnimation(
             parent: _animController, curve: Curves.easeOut));
     _animController.forward();
-    _startAutoPlay();
+    // _startAutoPlay();
   }
 
-  void _startAutoPlay() {
-    _timer = Timer.periodic(const Duration(seconds: 5), (_) {
-      final next =
-          (_currentIndex + 1) % AppContent.heroSlides.length;
-      _pageController.animateToPage(
-        next,
-        duration: const Duration(milliseconds: 600),
-        curve: Curves.easeInOut,
-      );
-    });
-  }
+  // void _startAutoPlay() {
+  //   _timer = Timer.periodic(const Duration(seconds: 5), (_) {
+  //     final next =
+  //         (_currentIndex + 1) % AppContent.heroSlides.length;
+  //     _pageController.animateToPage(
+  //       next,
+  //       duration: const Duration(milliseconds: 600),
+  //       curve: Curves.easeInOut,
+  //     );
+  //   });
+  // }
 
   @override
   void dispose() {
