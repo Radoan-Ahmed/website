@@ -28960,7 +28960,7 @@ $S:2}
 A.azP.prototype={
 $1(a){var s=A.dx().b
 s=s==null?null:s.canvasKitBaseUrl
-return(s==null?"https://www.gstatic.com/flutter-canvaskit/4c525dac5ebe5971c5708ef73558ed8edcf4a362/":s)+a},
+return(s==null?"https://www.gstatic.com/flutter-canvaskit/c416acfeb8126e097f758c664aaa3da929e27da0/":s)+a},
 $S:117}
 A.Or.prototype={
 gA(a){var s=this.a
@@ -97505,9 +97505,9 @@ B.N3=new A.at(B.vZ,["location","Save On Health Care,Mirpur-10 Opposite of Mirpur
 B.N4=new A.at(B.vZ,["phone","01568099036"],t.l)
 B.pz=s([B.N3,B.N4],t.SN)
 B.vY={title:0,subtitle:1,buttonText:2,buttonUrl:3,image:4}
-B.Nd=new A.at(B.vY,["\u09b8\u09ae\u09a8\u09cd\u09ac\u09bf\u09a4 \u099a\u09bf\u0995\u09bf\u09ce\u09b8\u09be \u09b8\u09c7\u09ac\u09be \u0993 \u09b8\u09c1\u09b8\u09cd\u09a5 \u099c\u09c0\u09ac\u09a8",u.X,"OUR SERVICES","#services",u.h],t.l)
-B.Ne=new A.at(B.vY,["Integrative Health & Research","Natural Healing Better Living","BOOK APPOINTMENT","#appointment",u.r],t.l)
-B.Jw=s([B.Nd,B.Ne],t.SN)
+B.Ne=new A.at(B.vY,["\u0986\u0995\u09c1\u09aa\u09be\u0982\u099a\u09be\u09b0,\u0995\u09be\u09aa\u09bf\u0982 \u09a5\u09c7\u09b0\u09be\u09aa\u09bf \u0993 \u09a8\u09cd\u09af\u09be\u099a\u09be\u09b0\u09be\u09b2 \u09ae\u09c7\u09a1\u09bf\u09b8\u09bf\u09a8","\u09aa\u09cd\u09b0\u09be\u0995\u09c3\u09a4\u09bf\u0995 \u09a8\u09bf\u09b0\u09be\u09ae\u09af\u09bc, \u0989\u09a8\u09cd\u09a8\u09a4 \u099c\u09c0\u09ac\u09a8\u09af\u09be\u09aa\u09a8","OUR SERVICES","#services",u.h],t.l)
+B.Nd=new A.at(B.vY,["Acupuncture,Cupping Therapy & Natural Medicine","Natural Healing Better Living","BOOK APPOINTMENT","#appointment",u.r],t.l)
+B.Jw=s([B.Ne,B.Nd],t.SN)
 B.fx={image:0,title:1,description:2,url:3}
 B.MB=new A.at(B.fx,[u.b,"Acupuncture","\ud83e\ude7a Acupuncture \u2013 A Natural Path to Healing\n\n        Acupuncture is a time-tested therapeutic technique that involves inserting very fine, sterile needles into specific points on the body. It is widely used to relieve pain, restore balance, and support the body\u2019s natural healing process.\n\n        ### \ud83d\udd2c How Does Acupuncture Work?\n\n        Acupuncture stimulates specific points (acupoints) along the body\u2019s energy pathways. This helps to\u2014\n\n        * Improve blood circulation\n        * Regulate the nervous system\n        * Reduce inflammation and pain\n        * Promote natural healing and balance\n\n        ### \ud83c\udf3f Benefits of Acupuncture\n\n        Acupuncture can be effective for a wide range of conditions, including:\n\n        * Chronic pain (neck, back, shoulder, knee)\n        * Migraine and tension headaches\n        * Stress, anxiety, and insomnia\n        * Digestive disorders (IBS, bloating, indigestion)\n        * Hormonal imbalance and infertility support\n        * Arthritis and joint problems\n        * General fatigue and low energy\n\n        ### \ud83d\udc69\u200d\u2695\ufe0f Who Can Benefit?\n\n        Acupuncture is suitable for most adults. However, you should consult a professional if you are:\n\n        * Pregnant\n        * Suffering from bleeding disorders\n        * Using a pacemaker (in case of electro-acupuncture)\n        * Extremely weak or medically unstable\n\n        ### \u26a0\ufe0f Safety & Hygiene\n\n        All treatments are performed using *single-use, sterile, disposable needles* in a clean and hygienic environment to ensure maximum safety and comfort.\n\n        ### \ud83c\udfe5 Why Choose Us?\n\n        * Certified and experienced practitioners\n        * Evidence-based and personalized care\n        * Safe, painless, and effective techniques\n        * Calm and comfortable treatment setting\n\n        ### \ud83d\udcde Book an Appointment\n\n        Restore your body\u2019s balance naturally. Contact us today to schedule your acupuncture session.","#services"],t.l)
 B.MD=new A.at(B.fx,[u.k,"Cupping Therapy","\ud83e\ude7a Benefit of Cupping (Hijama)\nHijama may help promote relaxation, support circulation, reduce muscle tension, and contribute to overall wellness when performed properly.\n\nWho Can Take Hijama?\nSuitable for adults seeking supportive care for stress, body discomfort, fatigue, or general well-being after professional consultation.\n\nWhy Choose Us?\nProfessional care \u2022 Hygienic procedure \u2022 Personalized approach \u2022 Patient comfort and safety first.","#services"],t.l)
