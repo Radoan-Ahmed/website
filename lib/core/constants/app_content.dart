@@ -44,15 +44,15 @@ class AppContent {
   // ─── HERO SLIDES ─────────────────────────────────────────
   static const List<Map<String, String>> heroSlides = [
     {
-      'title': 'সমন্বিত চিকিৎসা সেবা ও সুস্থ জীবন',
-      'subtitle': 'The Integrative Health & Research Centre in Bangladesh',
+      'title': 'আকুপাংচার,কাপিং থেরাপি ও ন্যাচারাল মেডিসিন',
+      'subtitle': 'প্রাকৃতিক নিরাময়, উন্নত জীবনযাপন',
       'buttonText': 'OUR SERVICES',
       'buttonUrl': '#services',
       'image':
           'https://awcbd.org/wp-content/uploads/2024/12/AWC-Website-Banner-03.webp',
     },
     {
-      'title': 'Integrative Health & Research',
+      'title': 'Acupuncture,Cupping Therapy & Natural Medicine',
       'subtitle': 'Natural Healing Better Living',
       'buttonText': 'BOOK APPOINTMENT',
       'buttonUrl': '#appointment',
