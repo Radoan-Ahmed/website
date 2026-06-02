@@ -53,7 +53,7 @@ class AppContent {
     },
     {
       'title': 'Acupuncture,Cupping Therapy & Natural Medicine',
-      'subtitle': 'Natural Healing Better Living',
+      'subtitle': 'Natural Healing, Better Living',
       'buttonText': 'BOOK APPOINTMENT',
       'buttonUrl': '#appointment',
       'image':
