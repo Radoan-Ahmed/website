@@ -67,19 +67,11 @@ class _AboutIntroBlock extends StatelessWidget {
   Widget _image() {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
-      child: Image.network(
-        AppContent.aboutImage,
+      child: Image.asset(
+        "assets/images/about_us.jpg",
         fit: BoxFit.cover,
         height: 420,
         width: double.infinity,
-        errorBuilder: (_, __, ___) => Container(
-          height: 420,
-          decoration: BoxDecoration(
-            color: AppTheme.accent,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Icon(Icons.local_hospital, size: 80, color: AppTheme.primary),
-        ),
       ),
     );
   }

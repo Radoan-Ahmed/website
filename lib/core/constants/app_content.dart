@@ -98,7 +98,7 @@ class AppContent {
   static const String aboutBody =
       'In a world that often prioritizes quick fixes over lasting wellness, we invite you to experience a deeper, more intentional approach to healthcare. Our practice merges the wisdom of ancient traditions with a compassionate, modern understanding of the human body. Whether you are seeking relief from chronic pain, navigating a health challenge, or simply looking to optimize your energy, we provide a sanctuary for your recovery and growth.';
   static const String aboutImage =
-      'https://awcbd.org/wp-content/uploads/2024/12/AWC-Website-Banner-03.webp';
+      'assets/images/about_us.jpg';
 
   static const String visionTitle = 'Our Vision';
   static const String visionBody =

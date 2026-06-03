@@ -74,6 +74,7 @@ flutter:
     - assets/images/female_doctor_image.jpg
     - assets/images/rakib_doctor_image.jpeg
     - assets/images/app_logo.jpeg
+    - assets/images/about_us.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
